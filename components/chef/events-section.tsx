@@ -8,32 +8,76 @@ const events = [
   {
     year: "2025",
     items: [
-      { title: "Зочид буудлын Экспо", detail: "Олон улсын оролцоо", icon: MapPin },
-      { title: "Террас Нээлтийн Үдэшлэг", detail: "Highland Park", icon: Award },
-      { title: "Монос Группийн 35 жилийн ой", detail: "2800+ зочдын зоог", icon: Users },
-      { title: "Эв нэгдлийн өдрийн арга хэмжээ", detail: "Томоохон зоогийн үйлчилгээ", icon: Calendar },
+      {
+        title: "Зочид буудлын Экспо",
+        detail: "Олон улсын оролцоо",
+        icon: MapPin,
+      },
+      {
+        title: "Террас Нээлтийн Үдэшлэг",
+        detail: "Highland Park",
+        icon: Award,
+      },
+      {
+        title: "Монос Группийн 35 жилийн ой",
+        detail: "2800+ зочдын зоог",
+        icon: Users,
+      },
+      {
+        title: "Эв нэгдлийн өдрийн арга хэмжээ",
+        detail: "Томоохон зоогийн үйлчилгээ",
+        icon: Calendar,
+      },
     ],
   },
   {
     year: "2024",
     items: [
-      { title: "Зочломтгой байдлын Экспо", detail: "Мастер Класс - Хоол", icon: Award },
-      { title: "Horeca Mongolia Экспо", detail: "Мастер Класс Илтгэгч", icon: Award },
-      { title: "Тайландын олон улсын", detail: "Олон улсын оролцоо", icon: MapPin },
+      {
+        title: "Зочломтгой байдлын Экспо",
+        detail: "Мастер Класс - Хоол",
+        icon: Award,
+      },
+      {
+        title: "Horeca Mongolia Экспо",
+        detail: "Мастер Класс Илтгэгч",
+        icon: Award,
+      },
+      {
+        title: "Тайландын олон улсын",
+        detail: "Олон улсын оролцоо",
+        icon: MapPin,
+      },
     ],
   },
   {
     year: "2023",
     items: [
-      { title: "УБ Хоолны Наадам", detail: "10 метрийн BBQ Шууд хоол хийх", icon: Award },
+      {
+        title: "УБ Хоолны Наадам",
+        detail: "10 метрийн BBQ Шууд хоол хийх",
+        icon: Award,
+      },
     ],
   },
   {
     year: "2022",
     items: [
-      { title: "Аялал жуулчлалын тусгай зоог", detail: "Дээд зэргийн үйлчилгээ", icon: Users },
-      { title: "Монгол Банк VIP", detail: "VIP зоогийн үйлчилгээ", icon: Award },
-      { title: "Highland Park Арга хэмжээ", detail: "Ресторанын арга хэмжээ", icon: Calendar },
+      {
+        title: "Аялал жуулчлалын тусгай зоог",
+        detail: "Дээд зэргийн үйлчилгээ",
+        icon: Users,
+      },
+      {
+        title: "Монгол Банк VIP",
+        detail: "VIP зоогийн үйлчилгээ",
+        icon: Award,
+      },
+      {
+        title: "Highland Park Арга хэмжээ",
+        detail: "Ресторанын арга хэмжээ",
+        icon: Calendar,
+      },
     ],
   },
 ];
@@ -77,7 +121,7 @@ export function EventsSection() {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
-            className="flex-shrink-0 w-[350px]"
+            className="shrink-0 w-87.5"
           >
             <div className="sticky top-0 mb-6">
               <motion.span
@@ -103,7 +147,7 @@ export function EventsSection() {
                   className="bg-card border border-border rounded-sm p-5 group hover:border-primary/50 transition-colors"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>

@@ -115,8 +115,8 @@ export function ExperienceSection() {
                   index === experiences.length - 1 ? "w-4.5 h-4.5" : "w-4 h-4"
                 } ${
                   index % 2 === 0
-                    ? "left-[-7px] md:left-auto md:right-[calc(50%-8px)]"
-                    : "left-[-7px] md:left-[calc(50%-8px)]"
+                    ? "-left-1.75 md:left-auto md:right-[calc(50%-8px)]"
+                    : "-left-1.75 md:left-[calc(50%-8px)]"
                 }`}
               />
 

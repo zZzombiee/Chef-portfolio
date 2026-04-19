@@ -59,7 +59,7 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/5] bg-secondary rounded-sm overflow-hidden relative group">
+            <div className="aspect-4/5 bg-secondary rounded-sm overflow-hidden relative group">
               {/* Replace with actual photo */}
 
               <Image

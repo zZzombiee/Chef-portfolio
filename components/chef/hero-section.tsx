@@ -41,7 +41,7 @@ export function HeroSection() {
         {/* Photo placeholder - replace with actual hero image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative w-full h-full">
-            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
+            <div className="absolute inset-0 bg-linear-to-b from-background/60 via-background/30 to-background" />
             <div className="absolute inset-0 sm:flex items-center justify-center hidden">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -180,7 +180,7 @@ export function HeroSection() {
                 <span className="text-xs text-muted-foreground tracking-widest uppercase">
                   {language === "mn" ? "Доош гүйлгэнэ үү" : "Scroll down"}
                 </span>
-                <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
+                <div className="w-px h-12 bg-linear-to-b from-primary to-transparent" />
               </motion.div>
             </motion.div>
           )}

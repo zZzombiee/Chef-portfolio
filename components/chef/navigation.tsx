@@ -137,7 +137,7 @@ export function Navigation() {
                 {item.label}
               </motion.a>
             ))}
-            <div className="pt-4 border-t border-border">
+            <div className="pt-4 border-t border-border w-fit">
               <FlagToggle
                 language={language}
                 onToggle={() => {

@@ -85,12 +85,6 @@ const events = [
 export function EventsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
     <section ref={containerRef} className="py-32 overflow-hidden" id="events">
@@ -114,7 +108,14 @@ export function EventsSection() {
       </div>
 
       {/* Horizontal scrolling cards */}
-      <motion.div style={{ x }} className="flex gap-8 px-6 pb-8">
+      <motion.div
+        drag="x"
+        dragConstraints={{ right: 0, left: -((events.length - 1) * 370) }}
+        dragTransition={{ bounceStiffness: 300, bounceDamping: 30 }}
+        dragElastic={0.1}
+        whileDrag={{ cursor: "grabbing" }}
+        className="flex gap-8 px-6 pb-8 cursor-grab"
+      >
         {events.map((yearGroup, groupIndex) => (
           <motion.div
             key={yearGroup.year}
@@ -163,7 +164,7 @@ export function EventsSection() {
               ))}
             </div>
           </motion.div>
-        ))}
+        ))}{" "}
       </motion.div>
     </section>
   );

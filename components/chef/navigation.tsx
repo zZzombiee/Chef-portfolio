@@ -92,13 +92,19 @@ export function Navigation() {
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-primary text-primary-foreground px-3 py-1 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
                 >
-                  <span>{language === "mn" ? "CV " : "Download "}</span>
-                  <motion.div
-                    animate={{ x: isHovered ? 5 : 0 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                  <a
+                    href="/Gankhuyag-CV.pdf"
+                    download="Gankhuyag-CV.pdf"
+                    className="w-full bg-primary text-primary-foreground px-2 py-1.5 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
                   >
-                    {language === "mn" ? " татах" : " CV"}
-                  </motion.div>
+                    <span>{language === "mn" ? "CV " : "Download "}</span>
+                    <motion.div
+                      animate={{ x: isHovered ? 5 : 0 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      {language === "mn" ? " татах" : " CV"}
+                    </motion.div>
+                  </a>
                 </motion.button>
               </div>
             </div>
@@ -173,7 +179,13 @@ export function Navigation() {
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-primary text-primary-foreground px-2 py-1.5 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
               >
-                <span>{language === "mn" ? "CV татах" : "Download CV"}</span>
+                <a
+                  href="/Gankhuyag-CV.pdf"
+                  download="Gankhuyag-CV.pdf"
+                  className="w-full bg-primary text-primary-foreground px-2 py-1.5 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
+                >
+                  <span>{language === "mn" ? "CV татах" : "Download CV"}</span>
+                </a>
               </motion.button>
             </div>
           </div>

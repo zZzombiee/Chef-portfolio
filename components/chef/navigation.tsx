@@ -1,16 +1,17 @@
 "use client";
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ChefHat, Menu, X } from "lucide-react";
-import FlagToggle from "./lang-toggle";
 import { useLanguage } from "../context/language-context";
+import FlagSwitch from "./lang-toggle";
 
 export function Navigation() {
   const { language, setLanguage } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const [isHovered, setIsHovered] = useState(false);
 
   const navItems = [
     { label: language === "mn" ? "Миний тухай" : "About", href: "#about" },
@@ -74,14 +75,32 @@ export function Navigation() {
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
                 </motion.a>
               ))}
-              <FlagToggle
-                language={language}
-                onToggle={() => {
-                  const newLang = language === "mn" ? "en" : "mn";
-                  setLanguage(newLang);
-                  localStorage.setItem("lang", newLang);
-                }}
-              />
+              <div className="flex gap-4">
+                <FlagSwitch
+                  language={language}
+                  onToggle={() => {
+                    const newLang = language === "mn" ? "en" : "mn";
+                    setLanguage(newLang);
+                    localStorage.setItem("lang", newLang);
+                  }}
+                />
+                <motion.button
+                  type="submit"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-primary text-primary-foreground px-3 py-1 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
+                >
+                  <span>{language === "mn" ? "CV " : "Download "}</span>
+                  <motion.div
+                    animate={{ x: isHovered ? 5 : 0 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {language === "mn" ? " татах" : " CV"}
+                  </motion.div>
+                </motion.button>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -137,8 +156,8 @@ export function Navigation() {
                 {item.label}
               </motion.a>
             ))}
-            <div className="pt-4 border-t border-border w-fit">
-              <FlagToggle
+            <div className="pt-4 border-t border-border w-fit flex items-center gap-4">
+              <FlagSwitch
                 language={language}
                 onToggle={() => {
                   const newLang = language === "mn" ? "en" : "mn";
@@ -146,6 +165,16 @@ export function Navigation() {
                   localStorage.setItem("lang", newLang);
                 }}
               />
+              <motion.button
+                type="submit"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-primary text-primary-foreground px-2 py-1.5 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
+              >
+                <span>{language === "mn" ? "CV татах" : "Download CV"}</span>
+              </motion.button>
             </div>
           </div>
         </motion.nav>

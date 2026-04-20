@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Phone, MapPin, Send, ChefHat } from "lucide-react";
+import { Phone, MapPin, Send, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../context/language-context";
 
 export function ContactSection() {
@@ -64,9 +64,16 @@ export function ContactSection() {
                   value: "+976 9912 6323",
                 },
                 {
-                  icon: Phone,
-                  label: language === "en" ? "Additional Phone" : "Нэмэлт утас",
-                  value: "+976 7706 6683",
+                  icon: Facebook,
+                  label: language === "en" ? "Facebook" : "Фейсбүүк",
+                  value: "С. Ганхуяг",
+                  link: "https://www.facebook.com/ganaa.saindai",
+                },
+                {
+                  icon: Instagram,
+                  label: language === "en" ? "Instagram" : "Инстаграм",
+                  value: "Ganaa.saindai",
+                  link: "https://www.instagram.com/ganaa.saindai/",
                 },
                 {
                   icon: MapPin,
@@ -91,7 +98,21 @@ export function ContactSection() {
                     <p className="text-muted-foreground text-sm">
                       {item.label}
                     </p>
-                    <p className="text-foreground font-medium">{item.value}</p>
+
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-foreground font-medium">
+                        {item.value}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               ))}

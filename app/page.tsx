@@ -12,6 +12,7 @@ import { Footer } from "@/components/chef/footer";
 import { CursorEffect } from "@/components/chef/cursor-effect";
 import { useEffect, useState } from "react";
 import { LanguageProvider } from "@/components/context/language-context";
+import { AwardsSection } from "@/components/chef/awards";
 
 export default function ChefPortfolio() {
   const [language, setLanguage] = useState<"mn" | "en">("mn");
@@ -43,7 +44,9 @@ export default function ChefPortfolio() {
         <div id="skills">
           <SkillsSection />
         </div>
-
+        <div id="awards">
+          <AwardsSection />
+        </div>
         <div id="gallery">
           <GallerySection />
         </div>

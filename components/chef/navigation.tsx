@@ -20,6 +20,7 @@ export function Navigation() {
       href: "#experience",
     },
     { label: language === "mn" ? "Мэргэшил" : "Skills", href: "#skills" },
+    { label: language === "mn" ? "Гавьяа шагнал" : "Awards", href: "#awards" },
     { label: language === "mn" ? "Зураг" : "Gallery", href: "#gallery" },
     { label: language === "mn" ? "Арга хэмжээ" : "Events", href: "#events" },
     { label: language === "mn" ? "Холбоо барих" : "Contact", href: "#contact" },

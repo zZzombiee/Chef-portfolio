@@ -95,12 +95,12 @@ export function Navigation() {
                   onMouseLeave={() => setIsHovered(false)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-primary text-primary-foreground px-3 py-1 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
+                  className="w-full bg-primary text-primary-foreground px-3 py-1 rounded-full font-medium flex items-center justify-center gap-1 transition-colors text-sm"
                 >
                   <a
                     href="/Gankhuyag-CV.pdf"
                     download="Gankhuyag-CV.pdf"
-                    className="w-full bg-primary text-primary-foreground px-2 py-1.5 rounded-full font-medium flex items-center justify-center hover:bg-primary/90 gap-1 transition-colors text-sm"
+                    className="w-full bg-primary text-primary-foreground px-2 py-1.5 rounded-full font-medium flex items-center justify-center gap-1 transition-colors text-sm"
                   >
                     <span>{language === "mn" ? "CV " : "Download "}</span>
                     <motion.div

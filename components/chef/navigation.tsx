@@ -14,18 +14,17 @@ export function Navigation() {
   const [isHovered, setIsHovered] = useState(false);
 
   const navItems = [
-    { label: language === "mn" ? "Миний тухай" : "About", href: "#about" },
+    { label: language === "mn" ? "Тухай" : "About", href: "#about" },
     {
       label: language === "mn" ? "Туршлага" : "Experience",
       href: "#experience",
     },
-    { label: language === "mn" ? "Мэргэшил" : "Skills", href: "#skills" },
-    { label: language === "mn" ? "Гавьяа шагнал" : "Awards", href: "#awards" },
+    { label: language === "mn" ? "Чадвар" : "Skills", href: "#skills" },
+    { label: language === "mn" ? "Шагнал" : "Awards", href: "#awards" },
     { label: language === "mn" ? "Зураг" : "Gallery", href: "#gallery" },
-    { label: language === "mn" ? "Арга хэмжээ" : "Events", href: "#events" },
-    { label: language === "mn" ? "Холбоо барих" : "Contact", href: "#contact" },
+    { label: language === "mn" ? "Эвент" : "Events", href: "#events" },
+    { label: language === "mn" ? "Холбоо" : "Contact", href: "#contact" },
   ];
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
   });

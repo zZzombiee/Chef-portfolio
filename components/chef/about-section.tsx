@@ -118,8 +118,8 @@ export function AboutSection() {
               </p>
               <p>
                 {language === "mn"
-                  ? "Миний 10 метрийн BBQ байгууламж хоолны наадмуудад алдаршсан бөгөөд галаар хоол хийх эртний урлагийг дүрслэн харуулсан гайхалтай хоолны туршлагыг бүтээдэг."
-                  : "My 10-meter BBQ setup has gained recognition among food enthusiasts, showcasing the art of grilling with a unique blend of traditional and modern techniques."}
+                  ? "Би 10 метр урттай пицца болон сэндвичээр хоолны наадмын зочдыг дайлж, грилл хоол хийх эртний урлагийг орчин үеийн амт, үзүүлбэртэй хослуулсан мартагдашгүй гастрономийн туршлагыг бүтээсэн."
+                  : "I have gained recognition among food enthusiasts for my 10-meter pizza and sandwich setup, showcasing the art of grilling with a unique blend of traditional and modern techniques."}
               </p>
             </motion.div>
 

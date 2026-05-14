@@ -42,7 +42,7 @@ export function ExperienceSection() {
       company:
         language === "en"
           ? "Mongolian Quest Chef Company"
-          : "Монголиан Квест Жуулчны Компани",
+          : "Mongolian Quest Жуулчны Компани",
       description:
         language === "en"
           ? "Responsible for providing authentic Mongolian cuisine to a diverse clientele."

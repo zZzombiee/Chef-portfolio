@@ -20,7 +20,7 @@ export function ExperienceSection() {
       period: "2011 – 2013",
       title:
         language === "en" ? "Cook / Assistant Cook" : "Тогооч / Туслах Тогооч",
-      company: language === "en" ? "Pelas Restaurant" : "Пэлас Ресторан",
+      company: language === "en" ? "Pelas Restaurant" : "Pelas Restaurant",
       description:
         language === "en"
           ? "Developed foundational culinary skills and learned the intricacies of professional kitchen management while preparing a variety of dishes."
@@ -30,7 +30,7 @@ export function ExperienceSection() {
       period: "2014 – 2016",
       title: language === "en" ? "Senior Cook" : "Ахлах Тогооч",
       company:
-        language === "en" ? "Mongoo's Restaurant" : "Мөнгөөгийн Ресторан",
+        language === "en" ? "Mongoo's Restaurant" : "Mongoo's Restaurant",
       description:
         language === "en"
           ? "Managed daily kitchen operations and led a team of cooks in preparing a variety of dishes."

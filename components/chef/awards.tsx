@@ -144,12 +144,13 @@ export function AwardsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
+          whileHover={{ y: -4 }}
           className="mb-16"
         >
           <p className="text-xs tracking-[0.25em] uppercase text-primary mb-4">
             {competitions[lang].label}
           </p>
-          <div className="border border-border rounded-sm p-6">
+          <div className="border border-border rounded-sm p-6 hover:border-primary/50 transition-colors">
             <div className="flex items-center gap-3 mb-6">
               <Trophy className="w-5 h-5 text-primary shrink-0" />
               <p className="font-serif text-lg text-foreground">
@@ -182,12 +183,13 @@ export function AwardsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
+          whileHover={{ y: -4 }}
           className="mb-16"
         >
           <p className="text-xs tracking-[0.25em] uppercase text-primary mb-4">
             {institutionalAwards[lang].label}
           </p>
-          <div className="border border-border rounded-sm p-6">
+          <div className="border border-border rounded-sm p-6 hover:border-primary/50 transition-colors">
             <div className="flex items-center gap-3 mb-4">
               <Award className="w-5 h-5 text-primary shrink-0" />
               <p className="font-serif text-lg text-foreground">

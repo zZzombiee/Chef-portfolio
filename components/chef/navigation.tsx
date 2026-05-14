@@ -63,9 +63,14 @@ export function Navigation() {
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">
               {navItems.map((item, index) => (
-                <motion.a
+                <motion.button
                   key={item.label}
-                  href={item.href}
+                  onClick={() => {
+                    document.querySelector(item.href)?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -73,7 +78,7 @@ export function Navigation() {
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
-                </motion.a>
+                </motion.button>
               ))}
               <div className="flex gap-4">
                 <FlagSwitch
@@ -154,7 +159,12 @@ export function Navigation() {
                   x: isMobileMenuOpen ? 0 : 20,
                 }}
                 transition={{ delay: index * 0.1 }}
-                onClick={(e) => {
+                onClick={() => {
+                  document.querySelector(item.href)?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+
                   setIsMobileMenuOpen(false);
                 }}
                 className="block text-lg text-foreground hover:text-primary transition-colors"
